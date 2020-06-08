@@ -1,5 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
+import LoginDrawer from './components/loginDrawer';
+import UtilityMenu from './components/utilityMenu';
 import './App.css';
 
 function App() {
@@ -19,6 +21,21 @@ function App() {
           Learn React
         </a>
       </header>
+      <div>
+      Authontication Container as Higher Order Component-
+      <details>
+        <summary>
+          Authenticated Login Drawer
+        </summary>
+        <LoginDrawer isAuthorized={true}></LoginDrawer>
+      </details>
+      <details>
+        <summary>
+          Non Authenticated Utility Menu
+        </summary>
+        <UtilityMenu isAuthorized={false}></UtilityMenu>
+      </details>
+      </div>
     </div>
   );
 }
