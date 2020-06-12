@@ -4,6 +4,7 @@ import LoginDrawer from './components/loginDrawer';
 import UtilityMenu from './components/utilityMenu';
 import ControlledForm from './components/controlledForm';
 import UncontrolledForm from './components/uncontrolledForm';
+import ErrorBoundary from './components/errorBoundary';
 import './App.css';
 
 function App() {
@@ -11,17 +12,6 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React Component Pattern
-        </a>
       </header>
       <div>
       <h2>Higher Order Component</h2>
@@ -51,6 +41,15 @@ function App() {
           UnControlled form input on submit
         </summary>
         <UncontrolledForm></UncontrolledForm>
+      </details>
+
+      <details>
+        <summary>
+          Error Boundary Example
+        </summary>
+        <ErrorBoundary>
+          <UtilityMenu isAuthorized={true} ></UtilityMenu>
+        </ErrorBoundary>
       </details>
       </div>
     </div>
