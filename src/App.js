@@ -8,6 +8,7 @@ import ErrorBoundary from './components/errorBoundary';
 import './App.css';
 import LoginDrawerContext from './components/loginDrawerWithContext';
 import { UserContext } from './context/userContext';
+import Border from './containment/borderComponent';
 
 function App() {
   return (
@@ -42,9 +43,9 @@ function App() {
         <summary>
           UnControlled form input on submit
         </summary>
-        <UncontrolledForm></UncontrolledForm>
+          <UncontrolledForm></UncontrolledForm>
       </details>
-
+      <h2>Error Boundary Component</h2>
       <details>
         <summary>
           Error Boundary Example
@@ -53,7 +54,7 @@ function App() {
           <UtilityMenu isAuthorized={true} ></UtilityMenu>
         </ErrorBoundary>
       </details>
-
+      <h2>Context Component</h2>
       <details>
         <summary>
           Context components
@@ -61,6 +62,15 @@ function App() {
         <UserContext.Provider value='Guest User'>
             <LoginDrawerContext></LoginDrawerContext>
         </UserContext.Provider>
+      </details>
+      <h2>Containment /Composite Component</h2>
+      <details>
+        <summary>
+          Border composition
+        </summary>
+        <Border>
+          <UncontrolledForm></UncontrolledForm>
+        </Border>
       </details>
       </div>
     </div>
