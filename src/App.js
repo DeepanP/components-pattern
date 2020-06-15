@@ -6,6 +6,8 @@ import ControlledForm from './components/controlledForm';
 import UncontrolledForm from './components/uncontrolledForm';
 import ErrorBoundary from './components/errorBoundary';
 import './App.css';
+import LoginDrawerContext from './components/loginDrawerWithContext';
+import { UserContext } from './context/userContext';
 
 function App() {
   return (
@@ -50,6 +52,15 @@ function App() {
         <ErrorBoundary>
           <UtilityMenu isAuthorized={true} ></UtilityMenu>
         </ErrorBoundary>
+      </details>
+
+      <details>
+        <summary>
+          Context components
+        </summary>
+        <UserContext.Provider value='Guest User'>
+            <LoginDrawerContext></LoginDrawerContext>
+        </UserContext.Provider>
       </details>
       </div>
     </div>
